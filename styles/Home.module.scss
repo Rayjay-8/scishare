@@ -1,0 +1,32 @@
+@import "mixins";
+
+$bg-color: #000000;
+$bg-color-sobre:#242424;
+$text-color: #fff;
+$primaria: #5E55AA;
+
+
+.container {
+  src: url('../static/media/Electrolize.ttf');
+  font-family: 'Electrolize', sans-serif;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  height: 100vh;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+
+
+
+
+@include desktop() {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

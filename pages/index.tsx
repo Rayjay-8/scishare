@@ -1,11 +1,17 @@
 import type { NextPage } from 'next'
+import styles from '../styles/Home.module.scss'
 
-import styles from '../styles/Home.module.css'
+import NavBar from './components/navbar';
 
 const Home: NextPage = () => {
+  var data = require('../api/dados.json');
+
   return (
     <div className={styles.container}>
-      <h1>lalala</h1>
+      <NavBar></NavBar>
+      <h1>Sci-Share</h1>
+      <h2>{data.Descricao}</h2>
+      {data.Url}
     </div>
   )
 }
