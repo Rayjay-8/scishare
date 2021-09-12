@@ -18,9 +18,11 @@ export default function UrlFrame(){
     
           
             {data.map(list =>
-            <button className={botao.buttonPrimario} key={list.Descricao}>
-                <a href={list.Url} target="_blank" >{list.Descricao}</a>
-            </button>
+            <a href={list.Url} target="_blank" key={list.Descricao}>
+                <button className={botao.buttonPrimario} >
+                    {list.Descricao}
+                </button>
+            </a>
             )}
 
             <button className={botao.buttonPrimario}>Adicionar +</button>

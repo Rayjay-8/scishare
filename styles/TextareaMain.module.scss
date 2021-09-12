@@ -2,9 +2,23 @@
 
 .textarea{
     width: fit-content;
+    height: 400px;
+    margin-top: 1rem;
     background: #2D2D2D;
     border-radius: 5px;
     width: -webkit-fill-available;
-    height: 400px;
+    
     padding: 1rem;
+    word-break: break-word;
+}
+
+.projectName{
+
+    color: #fff;
+ 
+    text-align: center;
+    font-size: 30px;
+    outline: none;
+    box-shadow:none;
+
 }

@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
     
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
       <UrlFrame></UrlFrame>
       
 
