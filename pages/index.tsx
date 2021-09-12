@@ -2,18 +2,23 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.scss'
 
 import NavBar from './components/navbar';
+import UrlFrame from './components/urlsearch'
+
 
 const Home: NextPage = () => {
-  var data = require('../api/dados.json');
+  
 
   return (
     <div className={styles.container}>
+    
       <NavBar></NavBar>
-      <h1>Sci-Share</h1>
-      <h2>{data.Descricao}</h2>
-      {data.Url}
+      <UrlFrame></UrlFrame>
+      
+
     </div>
   )
 }
+
+
 
 export default Home

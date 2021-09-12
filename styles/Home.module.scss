@@ -8,10 +8,11 @@ $primaria: #5E55AA;
 
 .container {
   src: url('../static/media/Electrolize.ttf');
-  font-family: 'Electrolize', sans-serif;
+  font-family: 'Electrolize';
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
+  position: relative;
   flex-direction: column;
   // justify-content: center;
   // align-items: center;

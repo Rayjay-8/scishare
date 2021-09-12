@@ -1,0 +1,27 @@
+$primaryColor:#333;
+$secondaryColor:#222;
+$fontPrimary:#fff;
+
+
+
+  .buttonPrimario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 22px;
+    border: 2px solid $primaryColor;
+    background-color: $primaryColor;
+    color: $fontPrimary;
+    font-weight: bold;
+    font-size: 23px;
+    width: 238px;
+    height: 49px;
+}
+
+.buttonSecundario{
+    background-color: $secondaryColor;
+    background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);
+    background: linear-gradient(to left, #f7b733, #fc4a1a);
+}

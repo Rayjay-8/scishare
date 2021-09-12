@@ -1,4 +1,10 @@
-{
-    "Descricao": "Nature",
-    "Url":"https://www.nature.com/search?q={$}"
-}
+[
+    {
+        "Descricao": "Nature",
+        "Url":"https://www.nature.com/search?q={$}"
+    },
+    {
+        "Descricao": "arXiv",
+        "Url":"https://arxiv.org/search/?query={$}&searchtype=all"
+    }
+]
