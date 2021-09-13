@@ -1,14 +1,27 @@
 
 import type { NextPage } from 'next'
+import React from 'react';
 
 import styles from '../../styles/frame.module.scss'
 
 import botao from '../../styles/Buttons.module.scss'
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
 
 import TextareaMain from './TextareMain';
 
 export default function UrlFrame(){
     var data = require('../../api/dados.json');
+    
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <>
         <div className={styles.FrameFlex}>
@@ -25,6 +38,7 @@ export default function UrlFrame(){
             )}
 
             <button className={botao.buttonPrimario}>Adicionar +</button>
+            
 
             
             
