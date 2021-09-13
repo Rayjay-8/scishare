@@ -12,6 +12,10 @@ import TextareaMain from './TextareMain';
 
 export default function UrlFrame(){
     var data = require('../../api/dados.json');
+
+    const insertJson = (word) => {
+        data.push({"Descricao":word,"Url":word})
+      };
     
     const [open, setOpen] = React.useState(false);
 
@@ -37,7 +41,7 @@ export default function UrlFrame(){
             </a>
             )}
 
-            <button className={botao.buttonPrimario}>Adicionar +</button>
+            <button className={botao.buttonPrimario} onClick={insertJson('teste')}>Adicionar +</button>
             
 
             
