@@ -1,5 +1,4 @@
 
-import { faBroadcastTower } from '@fortawesome/free-solid-svg-icons';
 import type { NextPage } from 'next'
 
 import styles from '../../styles/frame.module.scss'
@@ -31,9 +30,9 @@ export default function UrlFrame(){
             
         </div>
         {/* <div className={styles.Frame}> */}
-            <TextareaMain></TextareaMain>
+            {/* <TextareaMain></TextareaMain> */}
             {/* </div> */}
-    <div className={styles.Frame}><div className={styles.rightfast}></div></div>
+    {/* <div className={styles.Frame}><div className={styles.rightfast}></div></div> */}
         </div>
         
         </>

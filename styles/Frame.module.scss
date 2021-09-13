@@ -1,8 +1,9 @@
 
-$bg:#333;
+$bg:rgb(204, 76, 76);
 
 .Frame{
     width: fit-content;
+    height: fit-content;
     // background-color: #242424;
     display: flex;
     justify-content: space-between;
@@ -14,8 +15,9 @@ $bg:#333;
 
 
 .FrameFlex{
-    width: 100%;
+    // width: 100%;
     // background-color: #242424;
+    // height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -23,11 +25,3 @@ $bg:#333;
     border-radius: 5px;
 }
 
-.rightfast{
-    background-color: $bg;
-    color: #fff;
- 
-    width: 330px;
-    height: 300px;
-    
-}
