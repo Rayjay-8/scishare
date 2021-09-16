@@ -1,6 +1,9 @@
 {
   "name": "sci-share",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -24,9 +27,6 @@
     "react-spring": "^9.2.4",
     "sass": "^1.39.2"
   },
-  "engines": { 
-   "node": "14.15.0" 
- },
   "devDependencies": {
     "@types/react": "17.0.20",
     "eslint": "7.32.0",
