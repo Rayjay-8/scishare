@@ -1,15 +1,27 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
 import styled from 'styled-components';
+import React, { useState } from 'react';
+
+
+
 
 export default function LabelSelect({ Component, pageProps }){
-    const opcoes = [
-        {'Tag':'Rascunho','Select':'True',show:'red'},{'Tag':'Leitura'}]
+    // const opcoes = [{'Tag':'Rascunho','Select':'True',show:'red'},{'Tag':'Leitura'}]
+    const opcoes = ['Rascunho','Tag']
+
+    
+   
+   const [count, setCount] = useState(10);
+
+   const [ menuActive, setMenuState ] = useState(true);
+
     return (
         <>
         <ConteinerStyle>
+        <p>You clicked {count} times</p>
             {opcoes.map((number) =>
-   
-            <TagsStyle data={number.show} color="white" key='number'>{number.Tag} - <p>{number.show}</p></TagsStyle>
+            
+            <TagsStyle className={`p-sidebar-menu-item ${menuActive ? "yellow" : ""}`} onClick={() => setMenuState((prevMenuActive) => !prevMenuActive)}  key='number'>{number}</TagsStyle>
    
             // <TagsStyle color="#60409e" key='number'>{number}</TagsStyle>
        
@@ -38,7 +50,7 @@ const TagsStyle = styled.div`
     /* background-color: ${props => props.show ? '#EFEFEF' : '#60409e'}; */
     border-radius: 8px;
     cursor: pointer;
-    background-color: ${props => props.show};
+    /* background-color: ${props => props.show}; */
 
 
 `;
