@@ -15,7 +15,7 @@ export default function ActionsButtons(){
         checkedB: true,
       });
     
-      const handleChange = (event) => {
+      const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
         setState({ ...state, [event.target.name]: event.target.checked });
       };
    
