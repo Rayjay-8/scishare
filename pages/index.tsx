@@ -6,7 +6,7 @@ import UrlFrame from './components/urlsearch'
 import TextareaMain from './components/TextareMain';
 import ActionsButtons from './components/ActionButtons';
 
-import SpringModal from './components/Modalss';
+// import SpringModal from './components/Modalss';
 
 const Home: NextPage = () => {
   
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <UrlFrame></UrlFrame>
       <TextareaMain></TextareaMain>
       <ActionsButtons></ActionsButtons>
-      <SpringModal></SpringModal>
+      {/* <SpringModal></SpringModal> */}
       
 
     </div>
