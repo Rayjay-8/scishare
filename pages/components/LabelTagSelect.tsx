@@ -3,25 +3,39 @@ import styled from 'styled-components';
 import React, { useState } from 'react';
 
 
+import lala from '../../styles/LabelTags.module.scss'
 
 
-export default function LabelSelect({ Component, pageProps }){
-    // const opcoes = [{'Tag':'Rascunho','Select':'True',show:'red'},{'Tag':'Leitura'}]
-    const opcoes = ['Rascunho','Tag']
 
-    
-   
-   const [count, setCount] = useState(10);
 
-   const [ menuActive, setMenuState ] = useState(true);
+export default class LabelSelect extends React.Component{
+    state = {
+    	opcoes: [
+      	{ name: "Rascunho" },
+        { name: "Tag" },
+        { name: "Tag2" },
+        { name: "Tag3" },
+        { name: "Tag4" },
+        { name: "Tag5" },
+        { name: "Tag6" },
+      ],
+      activeIndex: 0,
+    }
+
+render() {
+   const { opcoes, activeIndex } = this.state;
 
     return (
         <>
         <ConteinerStyle>
-        <p>You clicked {count} times</p>
-            {opcoes.map((number) =>
+        
+            {opcoes.map((u, i) =>
             
-            <TagsStyle className={`p-sidebar-menu-item ${menuActive ? "yellow" : ""}`} onClick={() => setMenuState((prevMenuActive) => !prevMenuActive)}  key='number'>{number}</TagsStyle>
+            <TagsStyle 
+              className={i === activeIndex ? lala.active : ''}
+              onClick={() => this.setState({ activeIndex: i })}
+              key={u.name}>
+               {u.name}</TagsStyle>
    
             // <TagsStyle color="#60409e" key='number'>{number}</TagsStyle>
        
@@ -31,7 +45,7 @@ export default function LabelSelect({ Component, pageProps }){
         </>
     )
 
-
+            }
 }
 
 const ConteinerStyle = styled.div`
@@ -44,13 +58,11 @@ const ConteinerStyle = styled.div`
 
 const TagsStyle = styled.div`
     padding: 8px;
-    margin-right: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    /* background-color: ${props => props.show ? '#EFEFEF' : '#60409e'}; */
+    margin: 2px;
     border-radius: 8px;
     cursor: pointer;
-    /* background-color: ${props => props.show}; */
+
 
 
 `;
+
